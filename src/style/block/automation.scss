@@ -1,0 +1,37 @@
+.automation{
+    padding: 76px 0 50px;
+    background-color: #fff;
+
+    &__header{
+        max-width: 1110px;
+        font-size: 72px;
+        line-height: 80px;
+        font-family: "GothamPro";
+        font-weight: 500;
+        padding: 0 0 0 165px;
+        margin-bottom: 35px;
+        margin-bottom: 35px;
+        position: relative;
+        
+        &::before{
+            content: "";
+            background-image: url('../image/automation/lightning.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -35px;
+            left: 20px;
+            width: 118px;
+            height: 186px;
+        }
+    }
+    &__text{
+        max-width: 1040px;
+        font-family: "GothamPro";
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 47px;
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,290 @@
+.welcome-section{
+    background-color: var(--mainBackColor);
+    color: #fff;
+    padding: 5px 0 77px;
+
+    
+    .welcome-heading{
+        margin-top: 84px;
+        .container{
+            display: flex;
+        }
+
+            h1{
+                max-width: 866px;
+                width: 100%;
+                font-family: "GothamPro";
+                font-weight: 700;
+                font-size: 130px;
+                position: relative;
+                line-height: 153px;
+                padding-top: 17px;
+                .title{
+                    margin-left: 5px;
+                    display: block;
+                }
+    
+                .subTitle{
+                    display: block;
+                    font-size: 110px;
+                    padding-left: 165px;
+                    line-height: 130px;
+                    position: relative;
+                }
+            }
+
+            .customSwitch{
+                cursor: pointer;
+                width: 135px;
+                position: absolute;
+                bottom: 19px;
+                left: 0;
+                
+                & input:checked[type=checkbox] + span{
+                    background: var(--green);
+                }
+                & input:checked[type=checkbox] + span::before{
+                    display: block;
+                    left: 63px;
+                }
+                
+                &__elem{
+                    background: var(--orange);
+                    border-radius: 64px;
+                    height: 74px;
+                    --green: #73F367;
+                    --orange: #FFCC4A;
+                    position: relative;
+                    display: block;
+                    
+                    &::before{
+                            position: absolute;
+                            top: 3px;
+                            left: 4px;
+                            display: block;
+                            content: "";
+                            width: 68px;
+                            height: 68px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            transition: .5s;
+                    }
+                    &:hover{
+                        background: var(--green);
+                    }
+                    &:hover::before{
+                        left: 63px;
+                    }
+                }
+
+                input[type=checkbox]{
+                    display: none;
+                }
+            }
+    }
+
+    .services{
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        .services__list{
+            display: flex;
+            // justify-content: space-between;
+        }
+        .services__item{
+            padding: 51px 50px;
+            width: calc(100% / 3);
+            margin: 0 auto;
+            svg{
+                max-width: 69px;
+                max-height: 69px;
+                margin-bottom: 16px;
+            }
+
+            p{
+                font-size: 26px;
+                line-height: 28px;
+            }
+            
+            &:nth-child(2){
+                border-left: 2px solid #FFFFFF;
+                border-right: 2px solid #FFFFFF;
+            }
+        }
+    }
+
+    .monitor{
+        max-width: 408px;
+        width: 100%;
+        margin-bottom: -2px;
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-left: 16px;
+
+        .monitor-block{
+            display: flex;
+        }
+
+        .progress-bar{
+            max-width: 142px;
+            width: 100%;
+            position: absolute;
+            top: 110px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: .2s;
+
+            .progress-bar__line-bg{
+                border: 2px solid #fff;
+                width: 100%;
+
+                .progress-bar__line{
+                    width: 0%;
+                    height: 14px;
+                    background-color: #fff;
+                }
+            }
+            .progress-bar__percent{
+                font-family: "FreigeistWide";
+                font-size: 14px;
+                color: #C4C4C4;
+                text-align: center;
+                max-width: 50px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+
+    .introduction{
+        margin-top: 83px;
+        user-select: none;
+        
+        .introduction-block{
+            max-width: 1317px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 63px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            &__heading{
+                background-color: var(--red);
+                width: 100%;
+                padding-bottom: 20px;
+                border-bottom: 2px solid var(--mainBackColor);
+                display: flex;
+                align-items: center;
+
+                div{
+                    width: 50%;
+
+                    &.bitrix-img{
+                        padding-left: 65px;
+                    }
+                    &.amoCRM-img{
+                        padding-left: 52px;
+                    }
+                }
+            }
+
+            &__parts{
+                border-bottom: 2px solid var(--red);
+                width: 50%;
+                background-color: #fff;
+                color: var(--mainFontColor);
+                
+                &.two-weeks{
+                    border-left: 2px solid var(--red);
+                    border-right: 2px solid var(--mainBackColor);
+                }
+                &.one-weeks{
+                    border-right: 2px solid var(--red);
+                }
+            }
+            &__list{
+                padding: 67px 37px 77px 70px;
+            }
+            &__item{
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                line-height: 28px;
+                
+                .item-span{
+                    max-width: calc(210px - 4px);
+                    width: 100%;
+                    border: 2px solid var(--mainBackColor);
+                    text-align: center;
+                    padding: 13px 0px;
+                    max-height: 58px;
+                    &:hover{
+                        color: #fff;
+                        background-color: var(--mainBackColor);
+                    }
+                }
+                span:last-child{
+                    margin-left: 116px;
+                }
+            }
+            &__item:not(:last-child){
+                margin-bottom: 45px;
+            }
+            
+            .item-span.active{
+                    color: #fff;
+                    background-color: var(--mainBackColor);
+                    position: relative;
+
+                    &::after{
+                        position: absolute;
+                        top: -17px;
+                        right: -94px;
+                        content: url("../image/introduction/day.png");
+                    }
+            }
+            .item-span.active.money{
+                    &::after{
+                        content: url("../image/introduction/money.png");
+                    }
+            }
+            .item-span.active.study{
+                    &::after{
+                        content: url("../image/introduction/study.png");
+                    }
+            }
+        }
+    }
+
+    .btn-group{
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .popUp-btn{
+            max-width: 379px;
+            width: 100%;
+            border: 2px solid #FFFFFF;
+            &:first-child{
+                margin-right: 40px  ;
+            }
+            .btn{
+                border: none;
+                transition: .3s;
+            }
+
+            &:hover .btn{
+                background-color: var(--red);
+                position: relative;
+                left: 13px;
+                top: 12px;
+                transition: .3s;
+            }
+            &:active .btn{
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}

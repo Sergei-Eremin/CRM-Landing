@@ -1,0 +1,85 @@
+.advantages{
+    .advantages-block{
+        background: #F2F2F2;
+        border-top: 2px solid var(--mainBackColor);
+        padding: 60px 0 70px;
+        
+        &.sources{
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+
+        &__header{
+            font-family: "GothamPro";
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        &__text{
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 26px;
+            max-width: 775px;
+        }
+        &__list{
+            max-width: 690px;
+        }
+        &__item{
+            font-size: 24px;
+            line-height: 32px;
+            padding-left: 22px;
+            position: relative;
+
+            &:not(:last-child){
+                margin-bottom: 24px;
+            }
+
+            &::before{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 7px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #FF3A3A;
+            }
+        }
+        &__band{
+            background: #D70A0A;
+            position: relative;
+            margin-top: 57px;
+            padding: 20px 19px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &-text{
+                max-width: 1206px;
+                color: #fff;
+                font-size: 30px;
+                line-height: 39px;  
+                margin-left: 28px;
+                white-space: nowrap;
+            }
+
+            .advantages-block__manager{
+                position: absolute;
+                top: -524px;
+                right: 0;
+            }
+            .advantages-block__manager.sources-manager{
+                left: 0;
+                top: -686px;
+            }
+            .advantages-block__manager.advertising-manager{
+                top: -491px;
+                right: 0;
+            }
+        }
+    }
+}
